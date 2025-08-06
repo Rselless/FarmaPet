@@ -17,7 +17,8 @@ return (
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/listacategorias" element={<ListaCategorias />} />
-                    <Route path="/cadastracategorias" element={<FormCategoria />} />
+                    <Route path="/cadastrarcategorias" element={<FormCategoria />} />
+                    <Route path='/editarcategoria/:id' element={<FormCategoria />} />
                     <Route path="/deletarcategoria/:id" element={<DeletarTema />} />
                 </Routes>
             </div>

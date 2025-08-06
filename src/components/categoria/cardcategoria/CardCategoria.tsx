@@ -20,7 +20,7 @@ function CardCategoria({ categoria }: CardCategoriaProps) {
                 {categoria.produto.join(', ')}
             </div>
             <div className="flex">
-                <Link to='' 
+                <Link to={`/editarcategoria/${categoria.id}`} 
                     className='w-full text-slate-100 bg-blue-400 hover:bg-blue-900 flex items-center justify-center py-2'>
                     <button>Editar</button>
                 </Link>
