@@ -8,7 +8,7 @@ function Navbar() {
                     <Link to='/home' className="text-2xl font-bold">FarmaPet</Link>
                     <div className="flex gap-4">
                         <Link to='/listacategorias' className="hover:text-gray-300">Lista Categorias</Link>
-                        <Link to='/cadastracategorias' className="hover:text-gray-300">Cadastra Categorias</Link>
+                        <Link to='/cadastrarcategorias' className="hover:text-gray-300">Cadastrar Categorias</Link>
                     </div>
                 </div>
             </div>
