@@ -2,7 +2,6 @@ import { type ChangeEvent, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import type Categoria from "../../../models/Categoria";
 import { atualizar, cadastrar, consultar } from "../../../services/Service";
-import { RotatingLines } from "react-loader-spinner";
 
 function FormCategoria() {
 
@@ -86,7 +85,7 @@ function FormCategoria() {
                     <label htmlFor="descricao">Descrição:</label>
                     <input
                         type="text"
-                        placeholder="Digite a descrição da nova categoria (opcional)"
+                        placeholder="Digite a descrição da nova categoria"
                         name='descricao'
                         value={categoria.descricao}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -95,18 +94,8 @@ function FormCategoria() {
                 </div>
                 <button
                     className="rounded text-slate-100 bg-green-900 hover:bg-green-700 w-1/2 py-2 mx-auto flex justify-center"
-                              type="submit">
-          {isLoading ?
-            <RotatingLines
-              strokeColor="white"
-              strokeWidth="5"
-              animationDuration="0.75"
-              width="24"
-              visible={true}
-            /> :
+                    type="submit">
             <span>{id === undefined ? 'Cadastrar' : 'Atualizar'}</span>
-
-          }
         </button>
       </form>
     </div>

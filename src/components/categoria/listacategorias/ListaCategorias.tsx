@@ -18,14 +18,14 @@ async function consultarCategorias() {
     try {
     await consultar('/categorias', setCategorias);
     } catch (error: any) {
-    alert('Erro!')
+        console.error('Erro ao consultar categorias:', error);
     }
     
 }
 
 useEffect(() => {
     consultarCategorias();
-}, []);
+},[]);
 
     
     return (
