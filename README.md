@@ -1,69 +1,46 @@
-# React + TypeScript + Vite
+# FarmaPet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Sobre o Projeto
 
-Currently, two official plugins are available:
+O Farma Pet é uma aplicação web de e-commerce focada em produtos para animais de estimação. O projeto é inteiramente Front-end e a interface de usuário foi construída para gerenciar categorias de produtos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+  * **React**: Biblioteca JavaScript para a construção da interface do usuário.
+  * **TypeScript**: Adiciona tipagem estática ao JavaScript, utilizada na definição de modelos de dados como `Categoria` e `Produto`.
+  * **Tailwind CSS**: Framework utilitário de CSS que foi usado para a estilização do projeto.
+  * **React Router DOM**: Gerencia a navegação e o roteamento da aplicação, com rotas definidas no `App.tsx`.
+  * **Axios**: Cliente HTTP para a comunicação assíncrona com a API.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ⚙️ Funcionalidades e Rotas
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+A interface do usuário é construída em torno de um sistema de navegação claro, permitindo as seguintes ações:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+  * **Página Inicial (`/` ou `/home`)**: Exibe a página principal da farmácia.
+  * **Lista de Categorias (`/listacategorias`)**: Exibe todos os cards de categorias, com seus respectivos nomes, descrições e botões de ação.
+  * **Cadastro de Categorias (`/cadastrarcategorias`)**: Um formulário para criar novas categorias.
+  * **Edição de Categorias (`/editarcategoria/:id`)**: Um formulário para editar uma categoria específica, acessível através do botão "Editar" em cada card.
+  * **Exclusão de Categorias (`/deletarcategoria/:id`)**: Uma página de confirmação para remover uma categoria, acessível pelo botão "Deletar".
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Como Executar o Projeto
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Para rodar o projeto localmente, siga os passos abaixo:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1.  **Pré-requisitos**:
+      * Node.js 18 ou superior
+2.  **Instalação**:
+      * Clone o repositório.
+      * Navegue até o diretório do projeto.
+      * Instale as dependências com o npm:
+        ```bash
+        npm install
+        ```
+3.  **Execução**:
+      * Inicie a aplicação localmente:
+        ```bash
+        npm run dev
+        ```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 👩‍💻 Desenvolvedor
+
+  * **Rafael Selles**
